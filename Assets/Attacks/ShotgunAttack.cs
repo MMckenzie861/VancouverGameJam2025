@@ -7,18 +7,15 @@ public class ShotgunAttack : MonoBehaviour
     public Transform player;
     public int numberOfCircles = 5;
     public float spreadAngle = 45f; 
-    public float shotInterval = 1f;
-
-    private float shotTimer;
 
     void Update()
     {
-        shotTimer += Time.deltaTime;
+        attack.attackTimer += Time.deltaTime;
 
-        if (shotTimer >= shotInterval)
+        if (attack.attackTimer >= attack.attackInterval)
         {
             Shoot();
-            shotTimer = 0f;
+            attack.attackTimer = 0f;
         }
     }
 

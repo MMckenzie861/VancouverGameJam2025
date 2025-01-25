@@ -4,16 +4,14 @@ public class Attack : MonoBehaviour
 {
     public float damage = 1;
     public float speed = 5;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public float attackInterval = 1f;
+    public float attackTimer = 1f;
+    private void OnTriggerEnter2D(Collider2D other)
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        if (other.CompareTag("Player"))
+        {
+            Destroy(other.gameObject);
+            Debug.Log("Player destroyed!");
+        }
     }
 }
