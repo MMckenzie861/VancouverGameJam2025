@@ -8,6 +8,8 @@ public class SwitchAttack : MonoBehaviour
     public Color triggerColor = Color.green;  // Color when collider is a trigger
     public Color regularColor = Color.red; // Color when collider is regular
     public float colorTransitionSpeed = 2.0f; // Speed of the color transition
+    public float moveSpeed = 3.0f; // Movement speed of the object
+    public float escapeDistance = 5.0f; // How far to try to escape from the player when in trigger mode
 
     private CircleCollider2D circleCollider;
     private SpriteRenderer spriteRenderer;
@@ -15,6 +17,8 @@ public class SwitchAttack : MonoBehaviour
     private bool isTrigger = false; // Initially, the collider is regular
     private Color currentTargetColor; // The target color for the transition
     private Color currentColor; // The current color of the sprite
+
+    public Transform playerTransform; // Reference to the player's transform
 
     void Start()
     {
@@ -25,6 +29,9 @@ public class SwitchAttack : MonoBehaviour
         // Set initial color to regular collider color
         currentColor = spriteRenderer.color;
         currentTargetColor = regularColor;
+
+        // Find the player in the scene (assumes the player object has a tag "Player")
+        playerTransform = GameObject.FindWithTag("Player").transform;
     }
 
     void Update()
@@ -42,6 +49,16 @@ public class SwitchAttack : MonoBehaviour
         // Gradually transition to the target color
         currentColor = Color.Lerp(currentColor, currentTargetColor, colorTransitionSpeed * Time.deltaTime);
         spriteRenderer.color = currentColor;
+
+        // Move the object based on whether it's in trigger or regular mode
+        if (isTrigger)
+        {
+            EscapeFromPlayer();
+        }
+        else
+        {
+            ChasePlayer();
+        }
     }
 
     void ToggleCollider()
@@ -52,5 +69,31 @@ public class SwitchAttack : MonoBehaviour
 
         // Set the target color for the transition based on the collider type
         currentTargetColor = isTrigger ? triggerColor : regularColor;
+    }
+
+    void ChasePlayer()
+    {
+        // Move towards the player when the collider is not a trigger
+        if (playerTransform != null)
+        {
+            // Calculate direction to player
+            Vector3 direction = (playerTransform.position - transform.position).normalized;
+
+            // Move towards the player
+            transform.position = Vector3.MoveTowards(transform.position, playerTransform.position, moveSpeed * Time.deltaTime);
+        }
+    }
+
+    void EscapeFromPlayer()
+    {
+        // Move away from the player when the collider is a trigger
+        if (playerTransform != null)
+        {
+            // Calculate direction away from player
+            Vector3 direction = (transform.position - playerTransform.position).normalized;
+
+            // Move away from the player
+            transform.position = Vector3.MoveTowards(transform.position, transform.position + direction, moveSpeed * Time.deltaTime);
+        }
     }
 }
