@@ -10,7 +10,7 @@ public class CollisionListener : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Collision detected with Player: " + collision.gameObject.name);
+            Debug.Log("Collision detected with Object: " + collision.gameObject.name);
             if (gameManager != null)
             {
                 gameManager.Hit(damage);
