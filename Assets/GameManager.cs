@@ -86,7 +86,7 @@ public class GameManager : MonoBehaviour
 
         StartCoroutine(IFrames(iFrameTime, boss));
     }
-
+    
     public IEnumerator Heal()
     {
         while (playerHealth < 3)

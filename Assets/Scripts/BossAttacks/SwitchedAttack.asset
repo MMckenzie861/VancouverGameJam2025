@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: SwitchedAttack
   m_EditorClassIdentifier: 
   attackName: SwitchAttack
-  cooldown: 0
   icon: {fileID: 0}
   switchPrefab: {fileID: 5258166640154251553, guid: 13a4b414698c4494ca19c1de37b4d846, type: 3}
-  test: {fileID: 0}
+  cooldown: 10

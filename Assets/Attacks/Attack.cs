@@ -14,6 +14,6 @@ public class Attack : MonoBehaviour
                 Debug.Log("Collision detected with Object: " + collision.gameObject.name);
                 gameManager.Hit(damage);
                 Debug.Log(gameManager.playerHealth);
-            }
         }
     }
+}
