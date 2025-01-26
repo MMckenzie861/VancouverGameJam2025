@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 9119454872092257102}
   - component: {fileID: 7183599712944274068}
   - component: {fileID: 7123852336736096058}
+  - component: {fileID: 7641128643112422835}
   m_Layer: 0
   m_Name: Bounce_Attack
-  m_TagString: Untagged
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,20 +103,20 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDamping: 0
-  m_AngularDamping: 0.1
+  m_AngularDamping: 3
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 648bcaff6a3cce74396523fa498c05e9, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!60 &7183599712944274068
 PolygonCollider2D:
@@ -181,3 +182,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialVelocity: {x: 5, y: 5}
   rotationSpeed: 100
+--- !u!114 &7641128643112422835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2777032390973947224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a0d46c118c77849a1dc519a1e47773, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  damage: 1

@@ -5,14 +5,17 @@ public class PulseAttack : MonoBehaviour
     public float minScale = 0.5f; // Minimum scale of the circle
     public float maxScale = 2.0f; // Maximum scale of the circle
     public float pulseSpeed = 2.0f; // Speed of the pulsing effect
+    public float moveSpeed = 2.0f;
 
     private Vector3 originalScale; // Original scale of the circle
     private bool expanding = true; // Whether the circle is currently expanding
+    private Transform player;
 
     void Start()
     {
         // Store the original scale
         originalScale = transform.localScale;
+        player = GameObject.FindWithTag("Player").transform;
     }
 
     void Update()
@@ -42,5 +45,19 @@ public class PulseAttack : MonoBehaviour
 
         // Apply the new scale uniformly
         transform.localScale = new Vector3(currentScale, currentScale, 1f);
+        ChasePlayer();
+    }
+
+    void ChasePlayer()
+    {
+        // Move towards the player when the collider is not a trigger
+        if (player != null)
+        {
+            // Calculate direction to player
+            Vector3 direction = (player.position - transform.position).normalized;
+
+            // Move towards the player
+            transform.position = Vector3.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
+        }
     }
 }
