@@ -386,6 +386,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pulse_Attack
       objectReference: {fileID: 0}
+    - target: {fileID: 6558395486901162370, guid: 2453b1b9931694811afecbeaf47dc259, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -997,6 +1001,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bounce_Attack
       objectReference: {fileID: 0}
+    - target: {fileID: 2777032390973947224, guid: 5cf3f29673aeb4d0d942d2b8adeb9899, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4398945434481853707, guid: 5cf3f29673aeb4d0d942d2b8adeb9899, type: 3}
       propertyPath: gameManager
       value: 
@@ -1404,21 +1412,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1403423675602998551, guid: 6487754417d014401b447ad4750ade4e, type: 3}
-      propertyPath: m_TagString
-      value: Orbital
-      objectReference: {fileID: 0}
     - target: {fileID: 2616565136186788749, guid: 6487754417d014401b447ad4750ade4e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.59
+      value: 0.77
       objectReference: {fileID: 0}
     - target: {fileID: 2616565136186788749, guid: 6487754417d014401b447ad4750ade4e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.67474866
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2616565136186788749, guid: 6487754417d014401b447ad4750ade4e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.10285904
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2616565136186788749, guid: 6487754417d014401b447ad4750ade4e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1447,18 +1451,6 @@ PrefabInstance:
     - target: {fileID: 2616565136186788749, guid: 6487754417d014401b447ad4750ade4e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4349697247814192294, guid: 6487754417d014401b447ad4750ade4e, type: 3}
-      propertyPath: m_Interpolate
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4349697247814192294, guid: 6487754417d014401b447ad4750ade4e, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7381128795191158468, guid: 6487754417d014401b447ad4750ade4e, type: 3}
-      propertyPath: m_TagString
-      value: Orbital
       objectReference: {fileID: 0}
     - target: {fileID: 8316336365299600020, guid: 6487754417d014401b447ad4750ade4e, type: 3}
       propertyPath: m_Name
