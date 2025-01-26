@@ -1,13 +1,36 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CircleHitDetection : MonoBehaviour
 {
     private CircleCollider2D circleCollider;
+    public SpriteRenderer one;
+    public SpriteRenderer two;
+    public SpriteRenderer three;
+    private List<Color> colorList = new List<Color>{Color.black, Color.red, Color.yellow, Color.green};
+    
+
+    
 
     void Start()
     {
         circleCollider = GetComponent<CircleCollider2D>();
+        
     }
+
+    public void UpdateHpVisual(int index, int hp) {
+        switch (index) {
+            case 1: one.color = colorList[hp];
+            break;
+            case 2: two.color = colorList[hp];
+            break;
+            case 3: three.color = colorList[hp];
+            break;
+            default: break;
+        }
+    }
+
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -43,14 +66,17 @@ public class CircleHitDetection : MonoBehaviour
             if (localAngle >= 0 && localAngle < 120)
             {
                 Debug.Log("Collision occurred in Segment 1 (0° to 120° relative to forward)");
+                UpdateHpVisual(1, 0);
             }
             else if (localAngle >= 120 && localAngle < 240)
             {
                 Debug.Log("Collision occurred in Segment 2 (120° to 240° relative to forward)");
+                UpdateHpVisual(2, 0);
             }
             else if (localAngle >= 240 && localAngle < 360)
             {
                 Debug.Log("Collision occurred in Segment 3 (240° to 360° relative to forward)");
+                UpdateHpVisual(3, 0);
             }
         }
     }
