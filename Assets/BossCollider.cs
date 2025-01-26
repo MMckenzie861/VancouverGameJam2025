@@ -5,9 +5,16 @@ public class BossCollider : MonoBehaviour
     public GameManager gameManager;
 
     public float damage = 1;
-    private void OnTriggerEnter2D(Collider2D collision)
+   
+
+    /// <summary>
+    /// Sent when an incoming collider makes contact with this object's
+    /// collider (2D physics only).
+    /// </summary>
+    /// <param name="other">The Collision2D data associated with this collision.</param>
+    void OnCollisionEnter2D(Collision2D other)
     {
-        if(collision.gameObject.CompareTag("Orbital"))
+        if(other.gameObject.CompareTag("Orbital"))
         {
             Debug.Log("Boss Hit");
 
