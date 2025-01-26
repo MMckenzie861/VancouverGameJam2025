@@ -15,7 +15,7 @@ MonoBehaviour:
   attackName: Bomb Attack
   icon: {fileID: 0}
   bombPrefab: {fileID: 8643881557631447171, guid: 39fcd50342960f94cabd2c75359fd4c2, type: 3}
-  cooldown: 4
+  cooldown: 3
   spawnAreas:
   - {x: -5.77, y: 1.72}
   - {x: -5.77, y: -2.765841}
