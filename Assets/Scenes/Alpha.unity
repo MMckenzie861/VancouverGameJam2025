@@ -1605,21 +1605,9 @@ PrefabInstance:
       propertyPath: display
       value: 
       objectReference: {fileID: 118514034}
-    - target: {fileID: 299833189976862972, guid: a8bb107fefaa94c5c97eef36ec0825bb, type: 3}
-      propertyPath: healDelay
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 299833189976862972, guid: a8bb107fefaa94c5c97eef36ec0825bb, type: 3}
-      propertyPath: iFrameTime
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2105570769613525059, guid: a8bb107fefaa94c5c97eef36ec0825bb, type: 3}
       propertyPath: m_Name
       value: GameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 2105570769613525059, guid: a8bb107fefaa94c5c97eef36ec0825bb, type: 3}
-      propertyPath: m_TagString
-      value: Manager
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
