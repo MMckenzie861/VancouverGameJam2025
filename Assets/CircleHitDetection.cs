@@ -9,6 +9,7 @@ public class CircleHitDetection : MonoBehaviour
     public SpriteRenderer two;
     public SpriteRenderer three;
     private List<Color> colorList = new List<Color>{Color.black, Color.red, Color.yellow, Color.green};
+    private GameManager gameManager;
     
 
     
@@ -16,6 +17,7 @@ public class CircleHitDetection : MonoBehaviour
     void Start()
     {
         circleCollider = GetComponent<CircleCollider2D>();
+        gameManager = GameObject.FindWithTag("Manager").GetComponent<GameManager>();
         
     }
 
@@ -34,7 +36,8 @@ public class CircleHitDetection : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        foreach (ContactPoint2D contact in collision.contacts)
+        if (collision.gameObject.CompareTag("Attack") || collision.gameObject.CompareTag("Boss")) {
+            foreach (ContactPoint2D contact in collision.contacts)
         {
             // Get the point of collision
             Vector2 collisionPoint = contact.point;
@@ -66,18 +69,20 @@ public class CircleHitDetection : MonoBehaviour
             if (localAngle >= 0 && localAngle < 120)
             {
                 Debug.Log("Collision occurred in Segment 1 (0° to 120° relative to forward)");
-                UpdateHpVisual(1, 0);
+                gameManager.IndividualHit(1, 1);
             }
             else if (localAngle >= 120 && localAngle < 240)
             {
                 Debug.Log("Collision occurred in Segment 2 (120° to 240° relative to forward)");
-                UpdateHpVisual(2, 0);
+                gameManager.IndividualHit(2, 1);
             }
             else if (localAngle >= 240 && localAngle < 360)
             {
                 Debug.Log("Collision occurred in Segment 3 (240° to 360° relative to forward)");
-                UpdateHpVisual(3, 0);
+                gameManager.IndividualHit(3, 1);
             }
         }
+        }
+        
     }
 }

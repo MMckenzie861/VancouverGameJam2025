@@ -3,6 +3,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UIElements;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,9 +17,15 @@ public class GameManager : MonoBehaviour
     private GameObject boss;
     public DisplayText display;
     private Coroutine healCoroutine;
+    private int oneHp = 3;
+    private int twoHp = 3;
+    private int threeHp = 3;
+    private CircleHitDetection circleManager;
+
 
     public void Start()
     {
+
         playerHealth = 3;
         bossHealth = 20;
 
@@ -27,6 +34,8 @@ public class GameManager : MonoBehaviour
 
         playerInvulnerable = false;
         bossInvulnerable = false;
+
+        circleManager = player.GetComponent<CircleHitDetection>();
     }
 
     public void Update()
@@ -40,6 +49,43 @@ public class GameManager : MonoBehaviour
         {
             Win();
         }
+    }
+
+    public void IndividualHit(int index, int damage) {
+        if(playerInvulnerable)
+        {
+            return;
+        }
+        
+        if (index == 1) {
+            oneHp -= damage;
+            circleManager.UpdateHpVisual(index, oneHp);
+        }
+        if (index == 2) {
+            twoHp -= damage;
+            circleManager.UpdateHpVisual(index, twoHp);
+        }
+        if (index == 3) {
+            threeHp -= damage;
+            circleManager.UpdateHpVisual(index, threeHp);
+        }
+        display.Display("one: " + oneHp.ToString() + " two: " + twoHp.ToString() + " three: " + threeHp.ToString());
+
+
+
+        if(oneHp <= 0 || twoHp <= 0 || threeHp <= 0)
+        {
+            Lose();
+        }
+
+        if (healCoroutine != null)
+        {
+            StopCoroutine(healCoroutine);
+        }
+
+        healCoroutine = StartCoroutine(PartialHeal());
+
+        StartCoroutine(IFrames(iFrameTime, player));
     }
 
     public void Hit(float damage)
@@ -95,6 +141,35 @@ public class GameManager : MonoBehaviour
             playerHealth++;
 
             display.Display(playerHealth.ToString());
+        }
+
+        healCoroutine = null;
+    }
+
+    public IEnumerator PartialHeal()
+    {
+        while (oneHp < 3 || twoHp < 3 || threeHp < 3)
+        {
+            yield return new WaitForSeconds(healDelay);
+                if (oneHp < 3)
+                {
+                    oneHp++;
+                }
+                
+                if (twoHp < 3)
+                {
+                    twoHp++;
+                }
+                
+                if (threeHp < 3)
+                {
+                    threeHp++;
+                }
+
+            display.Display("one: " + oneHp.ToString() + " two: " + twoHp.ToString() + " three: " + threeHp.ToString());
+            circleManager.UpdateHpVisual(1, oneHp);
+            circleManager.UpdateHpVisual(2, twoHp);
+            circleManager.UpdateHpVisual(3, threeHp);
         }
 
         healCoroutine = null;
