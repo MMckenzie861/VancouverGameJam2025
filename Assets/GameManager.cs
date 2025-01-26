@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
-    private int playerHealth;
+    public float playerHealth;
     public float healDelay;
     public float iFrameTime;
     private bool invulnerable;
@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void Hit(int damage)
+    public void Hit(float damage)
     {
         if(invulnerable)
         {
