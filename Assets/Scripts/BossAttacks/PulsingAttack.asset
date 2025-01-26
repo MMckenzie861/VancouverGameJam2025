@@ -15,4 +15,4 @@ MonoBehaviour:
   attackName: PulseAttack
   icon: {fileID: 0}
   pulsePrefab: {fileID: 6558395486901162370, guid: 2453b1b9931694811afecbeaf47dc259, type: 3}
-  cooldown: 10
+  cooldown: 2

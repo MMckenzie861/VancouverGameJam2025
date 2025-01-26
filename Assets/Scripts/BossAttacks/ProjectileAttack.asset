@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: ProjectileAttack
   m_EditorClassIdentifier: 
   attackName: ProjectileAttack
-  cooldown: 5
   icon: {fileID: 0}
   projectilePrefab: {fileID: 9126942490459127487, guid: eec221f1ee5a7444a894bc0acb28e554, type: 3}
-  projectileSpeed: 10
+  projectileSpeed: 1
