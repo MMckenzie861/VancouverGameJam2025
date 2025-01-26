@@ -15,5 +15,5 @@ MonoBehaviour:
   attackName: ShotgunAttack2
   icon: {fileID: 0}
   shotgunPrefab: {fileID: 6058078311373345872, guid: 10bab7ac6f4df474ebd46822c77dd748, type: 3}
-  cooldown: 4
+  cooldown: 5
   spawnArea: {x: 7.5, y: 0}
