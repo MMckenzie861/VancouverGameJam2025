@@ -17,6 +17,8 @@ public class SwitchAttack : MonoBehaviour
     private bool isTrigger = false; // Initially, the collider is regular
     private Color currentTargetColor; // The target color for the transition
     private Color currentColor; // The current color of the sprite
+    public float escapeSpeed = 0.8f;
+    public float chaseSpeed = 4f;
 
     public Transform playerTransform; // Reference to the player's transform
 
@@ -76,6 +78,7 @@ public class SwitchAttack : MonoBehaviour
         // Move towards the player when the collider is not a trigger
         if (playerTransform != null)
         {
+            moveSpeed = chaseSpeed;
             // Calculate direction to player
             Vector3 direction = (playerTransform.position - transform.position).normalized;
 
@@ -89,11 +92,24 @@ public class SwitchAttack : MonoBehaviour
         // Move away from the player when the collider is a trigger
         if (playerTransform != null)
         {
+            moveSpeed = escapeSpeed;
             // Calculate direction away from player
             Vector3 direction = (transform.position - playerTransform.position).normalized;
 
             // Move away from the player
             transform.position = Vector3.MoveTowards(transform.position, transform.position + direction, moveSpeed * Time.deltaTime);
+        }
+    }
+
+    // void /// <summary>
+    /// Sent when another object enters a trigger collider attached to this
+    /// object (2D physics only).
+    /// </summary>
+    /// <param name="other">The other Collider2D involved in this collision.</param>
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Orbital")) {
+            Destroy(gameObject);
         }
     }
 }
