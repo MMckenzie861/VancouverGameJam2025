@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 299833189976862972}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: Manager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 972c2d5a29c8b814f99c349849a9c965, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healDelay: 0
-  iFrameTime: 0
+  playerHealth: 3
+  healDelay: 4
+  iFrameTime: 0.5
   display: {fileID: 0}

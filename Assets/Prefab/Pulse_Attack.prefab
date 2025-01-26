@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6451504268836555393}
   - component: {fileID: 1720313186335587832}
   - component: {fileID: 7937449713550269554}
-  - component: {fileID: 9050474975743191250}
+  - component: {fileID: 2374688682704758664}
   - component: {fileID: 3439467027206329659}
   m_Layer: 0
   m_Name: Pulse_Attack
@@ -143,7 +143,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
---- !u!114 &9050474975743191250
+--- !u!114 &2374688682704758664
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -152,11 +152,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 6558395486901162370}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64a0d46c118c77849a1dc519a1e47773, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c75c408d63b7054bb26b90e276a4618, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   damage: 1
+  speed: 5
+  attackInterval: 1
+  attackTimer: 1
 --- !u!114 &3439467027206329659
 MonoBehaviour:
   m_ObjectHideFlags: 0

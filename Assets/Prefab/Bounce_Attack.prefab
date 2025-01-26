@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9119454872092257102}
   - component: {fileID: 7183599712944274068}
   - component: {fileID: 7123852336736096058}
-  - component: {fileID: 7641128643112422835}
+  - component: {fileID: 4398945434481853707}
   m_Layer: 0
   m_Name: Bounce_Attack
   m_TagString: Attack
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialVelocity: {x: 5, y: 5}
   rotationSpeed: 100
---- !u!114 &7641128643112422835
+--- !u!114 &4398945434481853707
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -191,8 +191,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2777032390973947224}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64a0d46c118c77849a1dc519a1e47773, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c75c408d63b7054bb26b90e276a4618, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   damage: 1
+  speed: 5
+  attackInterval: 1
+  attackTimer: 1

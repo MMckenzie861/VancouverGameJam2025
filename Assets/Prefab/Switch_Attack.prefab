@@ -11,10 +11,11 @@ GameObject:
   - component: {fileID: 1792925617767584143}
   - component: {fileID: 1540148684099289986}
   - component: {fileID: 7490584537080574955}
+  - component: {fileID: 5698220605859311766}
   - component: {fileID: 8369792917404679493}
   m_Layer: 0
   m_Name: Switch_Attack
-  m_TagString: Untagged
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,6 +126,23 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &5698220605859311766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5258166640154251553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c75c408d63b7054bb26b90e276a4618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  damage: 1
+  speed: 5
+  attackInterval: 1
+  attackTimer: 1
 --- !u!114 &8369792917404679493
 MonoBehaviour:
   m_ObjectHideFlags: 0

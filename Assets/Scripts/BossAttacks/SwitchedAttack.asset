@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dd77e8a6aaf54a46b3eb2f2f72aa35e, type: 3}
+  m_Name: SwitchedAttack
+  m_EditorClassIdentifier: 
+  attackName: SwitchAttack
+  cooldown: 0
+  icon: {fileID: 0}
+  switchPrefab: {fileID: 5258166640154251553, guid: 13a4b414698c4494ca19c1de37b4d846, type: 3}
+  test: {fileID: 0}
