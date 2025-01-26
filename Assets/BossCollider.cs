@@ -7,8 +7,10 @@ public class BossCollider : MonoBehaviour
     public float damage = 1;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Boss"))
+        if(collision.gameObject.CompareTag("Orbital"))
         {
+            Debug.Log("Boss Hit");
+
             gameManager.BossHit(damage);
         }
     }

@@ -100,24 +100,24 @@ public class GameManager : MonoBehaviour
         healCoroutine = null;
     }
 
-    public IEnumerator IFrames(float seconds, GameObject gameObject)
+    public IEnumerator IFrames(float seconds, GameObject obj)
     {
-        if (gameObject.tag == "Player")
+        if (obj.tag == "Player")
         {
             playerInvulnerable = true;
         }
-        else if (gameObject.tag == "Boss")
+        else if (obj.tag == "Boss")
         {
             bossInvulnerable = true;
         }
 
         yield return new WaitForSeconds(seconds);
 
-        if (gameObject.tag == "Player")
+        if (obj.tag == "Player")
         {
             playerInvulnerable = false;
         }
-        else if (gameObject.tag == "Boss")
+        else if (obj.tag == "Boss")
         {
             bossInvulnerable = false;
         }
