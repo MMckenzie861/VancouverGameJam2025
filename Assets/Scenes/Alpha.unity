@@ -137,7 +137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &118514033
 RectTransform:
   m_ObjectHideFlags: 0
@@ -154,7 +154,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -777, y: 945}
+  m_AnchoredPosition: {x: -777, y: 390}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &118514034
@@ -255,7 +255,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -253.2067, w: -3.5045543}
+  m_margin: {x: 145.87024, y: 0, z: -253.2067, w: -3.5045543}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -575,6 +575,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3723302801983896241, guid: 11606249400f3e341b4c30df3468085d, type: 3}
+      propertyPath: attacks.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3723302801983896241, guid: 11606249400f3e341b4c30df3468085d, type: 3}
+      propertyPath: 'attacks.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 52f383b486a8fe14e9fa988d41874ecb, type: 2}
+    - target: {fileID: 3723302801983896241, guid: 11606249400f3e341b4c30df3468085d, type: 3}
+      propertyPath: 'attacks.Array.data[4]'
+      value: 
+      objectReference: {fileID: 11400000, guid: f2b5918b140c6e5408f73ef96df38f02, type: 2}
+    - target: {fileID: 3723302801983896241, guid: 11606249400f3e341b4c30df3468085d, type: 3}
+      propertyPath: 'attacks.Array.data[5]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 2c89ba15a6b1cbb4c8f04a927d38acc3, type: 2}
+    - target: {fileID: 3723302801983896241, guid: 11606249400f3e341b4c30df3468085d, type: 3}
+      propertyPath: 'attacks.Array.data[6]'
+      value: 
+      objectReference: {fileID: 11400000, guid: d8c9cfa0319a3ef4eaaa3aad23c809a9, type: 2}
+    - target: {fileID: 3723302801983896241, guid: 11606249400f3e341b4c30df3468085d, type: 3}
+      propertyPath: 'attacks.Array.data[7]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 226ea3b2450918044b797e672e5455fa, type: 2}
+    - target: {fileID: 3723302801983896241, guid: 11606249400f3e341b4c30df3468085d, type: 3}
+      propertyPath: 'attacks.Array.data[8]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 226ea3b2450918044b797e672e5455fa, type: 2}
+    - target: {fileID: 6362910754636031513, guid: 11606249400f3e341b4c30df3468085d, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1455873754}
     - target: {fileID: 6496469836042293849, guid: 11606249400f3e341b4c30df3468085d, type: 3}
       propertyPath: m_Name
       value: Boss (1)
@@ -892,6 +924,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1455873754 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 299833189976862972, guid: a8bb107fefaa94c5c97eef36ec0825bb, type: 3}
+  m_PrefabInstance: {fileID: 1112522773191771542}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 972c2d5a29c8b814f99c349849a9c965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1470251594
 GameObject:
   m_ObjectHideFlags: 0
@@ -1262,6 +1305,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.99215686
       objectReference: {fileID: 0}
+    - target: {fileID: 2437319085365201365, guid: 6487754417d014401b447ad4750ade4e, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2616565136186788749, guid: 6487754417d014401b447ad4750ade4e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.77
@@ -1301,6 +1348,10 @@ PrefabInstance:
     - target: {fileID: 2616565136186788749, guid: 6487754417d014401b447ad4750ade4e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6024640546540173008, guid: 6487754417d014401b447ad4750ade4e, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7300286155219707430, guid: 6487754417d014401b447ad4750ade4e, type: 3}
       propertyPath: m_Color.b

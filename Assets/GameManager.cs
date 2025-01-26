@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UIElements;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -27,8 +28,8 @@ public class GameManager : MonoBehaviour
     public void Start()
     {
         playerHealth = 3;
-        bossHealth = 20;
-        maxBossHealth = 20;
+        bossHealth = 3;
+        maxBossHealth = 3;
 
         player = GameObject.FindGameObjectWithTag("Player");
         boss = GameObject.FindGameObjectWithTag("Boss");
@@ -117,6 +118,8 @@ public class GameManager : MonoBehaviour
 
     public void BossHit(float damage)
     {
+        Debug.Log("Hit Boss");
+
         if(bossInvulnerable)
         {
             return;
@@ -202,17 +205,17 @@ public class GameManager : MonoBehaviour
 
     public void Lose()
     {
-        Time.timeScale = 0.0f;
-
         player.SetActive(false);
 
         display.Display("You Lose");
+
+        SceneManager.LoadScene("TitleScreen");
     }
 
     public void Win()
     {
-        Time.timeScale = 0.0f;
-
         display.Display("You Win");
+
+        SceneManager.LoadScene("TitleScreen");
     }
 }

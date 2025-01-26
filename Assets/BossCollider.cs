@@ -14,7 +14,16 @@ public class BossCollider : MonoBehaviour
     /// <param name="other">The Collision2D data associated with this collision.</param>
     void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.CompareTag("Orbital"))
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Boss Hit Orbital");
+
+        Debug.Log("Orbital Hit Boss" + collision.gameObject.name);
+
+        if (collision.gameObject.CompareTag("Orbital"))
         {
             Debug.Log("Boss Hit");
 
