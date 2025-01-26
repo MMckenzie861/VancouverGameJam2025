@@ -29,16 +29,11 @@ public class BouncingAttack : MonoBehaviour
         rb.linearVelocity = rb.linearVelocity.normalized * initialVelocity.magnitude;
     }
 
-    // void /// <summary>
-    /// Sent when an incoming collider makes contact with this object's
-    /// collider (2D physics only).
-    /// </summary>
-    /// <param name="other">The Collision2D data associated with this collision.</param>
-    // void OnCollisionEnter2D(Collision2D other)
-    // {
-    //     if (other.gameObject.CompareTag("Player")) {
-    //         Debug.Log("HITTING player");
-    //         gameManager.Hit(1);
-    //     }
-    // }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Orbital")) {
+            Destroy(gameObject);
+        }
+    }
+
 }

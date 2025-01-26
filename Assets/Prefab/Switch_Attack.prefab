@@ -19,7 +19,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1792925617767584143
 Transform:
   m_ObjectHideFlags: 0
@@ -161,4 +161,6 @@ MonoBehaviour:
   colorTransitionSpeed: 2
   moveSpeed: 3
   escapeDistance: 5
+  escapeSpeed: 0.8
+  chaseSpeed: 4
   playerTransform: {fileID: 0}

@@ -344,7 +344,7 @@ PrefabInstance:
       objectReference: {fileID: 2014492853}
     - target: {fileID: 5099326798231506639, guid: 2453b1b9931694811afecbeaf47dc259, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.31
+      value: -4.69
       objectReference: {fileID: 0}
     - target: {fileID: 5099326798231506639, guid: 2453b1b9931694811afecbeaf47dc259, type: 3}
       propertyPath: m_LocalPosition.y
@@ -385,10 +385,6 @@ PrefabInstance:
     - target: {fileID: 6558395486901162370, guid: 2453b1b9931694811afecbeaf47dc259, type: 3}
       propertyPath: m_Name
       value: Pulse_Attack
-      objectReference: {fileID: 0}
-    - target: {fileID: 6558395486901162370, guid: 2453b1b9931694811afecbeaf47dc259, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -825,10 +821,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bounce_Attack
       objectReference: {fileID: 0}
-    - target: {fileID: 2777032390973947224, guid: 5cf3f29673aeb4d0d942d2b8adeb9899, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4398945434481853707, guid: 5cf3f29673aeb4d0d942d2b8adeb9899, type: 3}
       propertyPath: gameManager
       value: 
@@ -1242,7 +1234,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2616565136186788749, guid: 6487754417d014401b447ad4750ade4e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.35
+      value: 2.59
       objectReference: {fileID: 0}
     - target: {fileID: 2616565136186788749, guid: 6487754417d014401b447ad4750ade4e, type: 3}
       propertyPath: m_LocalPosition.y
