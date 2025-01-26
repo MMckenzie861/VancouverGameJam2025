@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
         playerHealth = 3;
 
         player = GameObject.FindGameObjectWithTag("Player");
+
+        invulnerable = false;
     }
 
     public void Update()
