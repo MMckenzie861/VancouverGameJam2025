@@ -6,8 +6,12 @@ public class ShotgunAttack : MonoBehaviour
     public GameObject circlePrefab;
     public Transform player;
     public int numberOfCircles = 5;
-    public float spreadAngle = 45f; 
+    public float spreadAngle = 45f;
 
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
     void Update()
     {
         attack.attackTimer += Time.deltaTime;

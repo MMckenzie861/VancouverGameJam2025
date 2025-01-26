@@ -9,12 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dd77e8a6aaf54a46b3eb2f2f72aa35e, type: 3}
-  m_Name: SwitchedAttack
+  m_Script: {fileID: 11500000, guid: 5c8314b5d1e09e54cb962ede65e180bf, type: 3}
+  m_Name: ShotgunAttack
   m_EditorClassIdentifier: 
-  attackName: SwitchAttack
+  attackName: ShotgunAttack
   icon: {fileID: 0}
-  switchPrefab: {fileID: 5258166640154251553, guid: 13a4b414698c4494ca19c1de37b4d846, type: 3}
-  cooldown: 2
-  spawnAmount: 3
-  offsetRange: 2
+  shotgunPrefab: {fileID: 6058078311373345872, guid: 10bab7ac6f4df474ebd46822c77dd748, type: 3}
+  cooldown: 4
+  spawnArea: {x: -7.5, y: 0}

@@ -269,28 +269,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 118514032}
   m_CullTransparentMesh: 1
---- !u!1 &502625826 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6496469836042293849, guid: 11606249400f3e341b4c30df3468085d, type: 3}
-  m_PrefabInstance: {fileID: 388147859798236922}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &502625832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 502625826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c75c408d63b7054bb26b90e276a4618, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
-  damage: 1
-  speed: 5
-  attackInterval: 1
-  attackTimer: 1
 --- !u!1 &976240411
 GameObject:
   m_ObjectHideFlags: 0
@@ -1390,22 +1368,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 519686953884893189, guid: 11606249400f3e341b4c30df3468085d, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3723302801983896241, guid: 11606249400f3e341b4c30df3468085d, type: 3}
-      propertyPath: attacks.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3723302801983896241, guid: 11606249400f3e341b4c30df3468085d, type: 3}
-      propertyPath: 'attacks.Array.data[3]'
-      value: 
-      objectReference: {fileID: 11400000, guid: f2b5918b140c6e5408f73ef96df38f02, type: 2}
-    - target: {fileID: 3723302801983896241, guid: 11606249400f3e341b4c30df3468085d, type: 3}
-      propertyPath: 'attacks.Array.data[4]'
-      value: 
-      objectReference: {fileID: 11400000, guid: f2b5918b140c6e5408f73ef96df38f02, type: 2}
     - target: {fileID: 6362910754636031513, guid: 11606249400f3e341b4c30df3468085d, type: 3}
       propertyPath: gameManager
       value: 
@@ -1413,10 +1375,6 @@ PrefabInstance:
     - target: {fileID: 6496469836042293849, guid: 11606249400f3e341b4c30df3468085d, type: 3}
       propertyPath: m_Name
       value: Boss
-      objectReference: {fileID: 0}
-    - target: {fileID: 6496469836042293849, guid: 11606249400f3e341b4c30df3468085d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8463518539533175007, guid: 11606249400f3e341b4c30df3468085d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1461,10 +1419,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6496469836042293849, guid: 11606249400f3e341b4c30df3468085d, type: 3}
-      insertIndex: 2
-      addedObject: {fileID: 502625832}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11606249400f3e341b4c30df3468085d, type: 3}
 --- !u!1001 &1112522773191771542
 PrefabInstance:

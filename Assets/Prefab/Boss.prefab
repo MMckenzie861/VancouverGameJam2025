@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8463518539533175007}
   - component: {fileID: 4051853540797402007}
+  - component: {fileID: 685123905475678323}
   - component: {fileID: 3723302801983896241}
   - component: {fileID: 519686953884893189}
   - component: {fileID: 6362910754636031513}
@@ -90,6 +91,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &685123905475678323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6496469836042293849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c75c408d63b7054bb26b90e276a4618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  damage: 1
+  speed: 5
+  attackInterval: 1
+  attackTimer: 1
 --- !u!114 &3723302801983896241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,9 +121,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attacks:
-  - {fileID: 11400000, guid: f5dde7bb5163aec43a616eae9dd3c404, type: 2}
   - {fileID: 11400000, guid: d8c9cfa0319a3ef4eaaa3aad23c809a9, type: 2}
   - {fileID: 11400000, guid: f2b5918b140c6e5408f73ef96df38f02, type: 2}
+  - {fileID: 11400000, guid: 226ea3b2450918044b797e672e5455fa, type: 2}
+  - {fileID: 11400000, guid: 52f383b486a8fe14e9fa988d41874ecb, type: 2}
+  - {fileID: 11400000, guid: 5caa40d04823aa349b8c64794191f7bc, type: 2}
+  - {fileID: 11400000, guid: 0be73d49e1f43af4fb57df1e8be2ddcf, type: 2}
+  - {fileID: 11400000, guid: f5dde7bb5163aec43a616eae9dd3c404, type: 2}
 --- !u!61 &519686953884893189
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -136,7 +158,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
