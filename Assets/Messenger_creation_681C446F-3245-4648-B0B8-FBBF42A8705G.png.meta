@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 4d2a0545fd97ad247a3d896a2e68930b
+guid: ec858ad9a2e903e48b8bcad5254ca8b6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5712959122012955994
-    second: Bubble_0
+      213: 1844153212927504407
+    second: Messenger_creation_681C446F-3245-4648-B0B8-FBBF42A8705G_0
+  - first:
+      213: 1344387963349077850
+    second: Messenger_creation_681C446F-3245-4648-B0B8-FBBF42A8705G_1
+  - first:
+      213: 7876519008514821713
+    second: Messenger_creation_681C446F-3245-4648-B0B8-FBBF42A8705G_2
+  - first:
+      213: 9133176195988300079
+    second: Messenger_creation_681C446F-3245-4648-B0B8-FBBF42A8705G_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bubble_0
+      name: Messenger_creation_681C446F-3245-4648-B0B8-FBBF42A8705G_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 58
-        width: 474
-        height: 454
+        x: 21
+        y: 171
+        width: 460
+        height: 194
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +124,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6aa171472fd77b0b0800000000000000
-      internalID: -5712959122012955994
+      spriteID: 71070ff839fb79910800000000000000
+      internalID: 1844153212927504407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Messenger_creation_681C446F-3245-4648-B0B8-FBBF42A8705G_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 344
+        width: 190
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5f8bb3dab938a210800000000000000
+      internalID: 1344387963349077850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Messenger_creation_681C446F-3245-4648-B0B8-FBBF42A8705G_2
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 349
+        width: 163
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15e43218e440f4d60800000000000000
+      internalID: 7876519008514821713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Messenger_creation_681C446F-3245-4648-B0B8-FBBF42A8705G_3
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 83
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f21afe05c5f8fbe70800000000000000
+      internalID: 9133176195988300079
       vertices: []
       indices: 
       edges: []
@@ -135,7 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bubble_0: -5712959122012955994
+      Messenger_creation_681C446F-3245-4648-B0B8-FBBF42A8705G_0: 1844153212927504407
+      Messenger_creation_681C446F-3245-4648-B0B8-FBBF42A8705G_1: 1344387963349077850
+      Messenger_creation_681C446F-3245-4648-B0B8-FBBF42A8705G_2: 7876519008514821713
+      Messenger_creation_681C446F-3245-4648-B0B8-FBBF42A8705G_3: 9133176195988300079
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
