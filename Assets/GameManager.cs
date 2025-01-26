@@ -7,20 +7,26 @@ using UnityEngine.UIElements;
 public class GameManager : MonoBehaviour
 {
     public float playerHealth;
+    public float bossHealth;
     public float healDelay;
     public float iFrameTime;
-    private bool invulnerable;
+    private bool playerInvulnerable;
+    private bool bossInvulnerable;
     private GameObject player;
+    private GameObject boss;
     public DisplayText display;
     private Coroutine healCoroutine;
 
     public void Start()
     {
         playerHealth = 3;
+        bossHealth = 20;
 
         player = GameObject.FindGameObjectWithTag("Player");
+        boss = GameObject.FindGameObjectWithTag("Boss");
 
-        invulnerable = false;
+        playerInvulnerable = false;
+        bossInvulnerable = false;
     }
 
     public void Update()
@@ -38,7 +44,7 @@ public class GameManager : MonoBehaviour
 
     public void Hit(float damage)
     {
-        if(invulnerable)
+        if(playerInvulnerable)
         {
             return;
         }
@@ -59,7 +65,26 @@ public class GameManager : MonoBehaviour
 
         healCoroutine = StartCoroutine(Heal());
 
-        StartCoroutine(IFrames(iFrameTime));
+        StartCoroutine(IFrames(iFrameTime, player));
+    }
+
+    public void BossHit(float damage)
+    {
+        if(bossInvulnerable)
+        {
+            return;
+        }
+
+        bossHealth -= damage;
+
+        if(bossHealth <= 0)
+        {
+            boss.SetActive(false);
+
+            Win();
+        }
+
+        StartCoroutine(IFrames(iFrameTime, boss));
     }
 
     public IEnumerator Heal()
@@ -75,17 +100,33 @@ public class GameManager : MonoBehaviour
         healCoroutine = null;
     }
 
-    public IEnumerator IFrames(float seconds)
+    public IEnumerator IFrames(float seconds, GameObject gameObject)
     {
-        invulnerable = true;
+        if (gameObject.tag == "Player")
+        {
+            playerInvulnerable = true;
+        }
+        else if (gameObject.tag == "Boss")
+        {
+            bossInvulnerable = true;
+        }
 
         yield return new WaitForSeconds(seconds);
 
-        invulnerable = false;
+        if (gameObject.tag == "Player")
+        {
+            playerInvulnerable = false;
+        }
+        else if (gameObject.tag == "Boss")
+        {
+            bossInvulnerable = false;
+        }
     }
 
     public void Lose()
     {
+        Time.timeScale = 0.0f;
+
         player.SetActive(false);
 
         display.Display("You Lose");
@@ -93,6 +134,7 @@ public class GameManager : MonoBehaviour
 
     public void Win()
     {
+        Time.timeScale = 0.0f;
 
         display.Display("You Win");
     }
