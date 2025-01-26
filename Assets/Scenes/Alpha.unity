@@ -349,6 +349,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 2014492853}
   damage: 1
+--- !u!114 &159267470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159267458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c75c408d63b7054bb26b90e276a4618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 2014492853}
+  damage: 1
+  speed: 5
+  attackInterval: 1
+  attackTimer: 1
 --- !u!1001 &207941108
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -427,6 +444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c75c408d63b7054bb26b90e276a4618, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   damage: 1
   speed: 5
   attackInterval: 1
@@ -918,6 +936,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2777032390973947224, guid: 5cf3f29673aeb4d0d942d2b8adeb9899, type: 3}
       insertIndex: -1
       addedObject: {fileID: 159267464}
+    - targetCorrespondingSourceObject: {fileID: 2777032390973947224, guid: 5cf3f29673aeb4d0d942d2b8adeb9899, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 159267470}
   m_SourcePrefab: {fileID: 100100000, guid: 5cf3f29673aeb4d0d942d2b8adeb9899, type: 3}
 --- !u!1 &1470251594
 GameObject:
