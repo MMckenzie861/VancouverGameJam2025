@@ -7,6 +7,10 @@ public class Attack : MonoBehaviour
     public float speed = 5;
     public float attackInterval = 1f;
     public float attackTimer = 1f;
+
+    public void Start() {
+        gameManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>();
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
