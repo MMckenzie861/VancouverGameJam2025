@@ -21,13 +21,14 @@ public class GameManager : MonoBehaviour
     private int twoHp = 3;
     private int threeHp = 3;
     private CircleHitDetection circleManager;
-
+    public HealthBar healthBar;
+    private float maxBossHealth;
 
     public void Start()
     {
-
         playerHealth = 3;
         bossHealth = 20;
+        maxBossHealth = 20;
 
         player = GameObject.FindGameObjectWithTag("Player");
         boss = GameObject.FindGameObjectWithTag("Boss");
@@ -122,6 +123,7 @@ public class GameManager : MonoBehaviour
         }
 
         bossHealth -= damage;
+        healthBar.UpdateHealthBar(bossHealth, maxBossHealth);
 
         if(bossHealth <= 0)
         {
