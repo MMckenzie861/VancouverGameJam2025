@@ -104,7 +104,7 @@ MonoBehaviour:
   attack: {fileID: 4137005626557998125}
   circlePrefab: {fileID: 1474944975334558856, guid: 63d7d039e1a8bb04a84d0e28a68e56c8, type: 3}
   player: {fileID: 0}
-  numberOfCircles: 5
+  numberOfCircles: 4
   spreadAngle: 45
 --- !u!114 &4137005626557998125
 MonoBehaviour:
