@@ -1,21 +1,21 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "BounceAttack", menuName = "Scriptable Objects/BounceAttack")]
-public class BounceAttack : BossAttack
+[CreateAssetMenu(fileName = "Shotgun", menuName = "Scriptable Objects/Shotgun")]
+public class Shotgun : BossAttack
 {
-    public GameObject bounceObstaclePrefab;
-    public float cooldown; // Individual cooldown for this attack
-    public int spawnAmount;
+    public GameObject shotgunPrefab;
+    public float cooldown;
+    public Vector2 spawnArea;
+    GameObject currentShotgun;
 
     public override void PerformAttack(Transform bossTransform, Transform playerTransform)
     {
         base.PerformAttack(bossTransform, playerTransform);
 
-        for (int index = 0; index < spawnAmount; index++)
-        {
-            // Instantiate the bounce obstacle prefab at the boss's position
-            Instantiate(bounceObstaclePrefab, bossTransform.position, Quaternion.identity);
-        }
+            Vector3 spawnPosition = new Vector3(spawnArea.x, spawnArea.y, 0f);
+            currentShotgun = Instantiate(shotgunPrefab, spawnPosition, Quaternion.identity);
+
+        
 
         // Start the cooldown timer for this attack
         if (bossTransform.TryGetComponent(out MonoBehaviour monoBehaviour))
@@ -32,6 +32,7 @@ public class BounceAttack : BossAttack
     {
         // Wait for the duration of this attack's cooldown
         yield return new WaitForSeconds(cooldown);
+        Destroy(currentShotgun);
         // Notify the parent (BossAttack) when the attack is done
         NotifyAttackComplete();
     }

@@ -6,13 +6,26 @@ public class SwitchedAttack : BossAttack
 {
     public GameObject switchPrefab;
     public float cooldown; // Individual cooldown for this attack
-
+    public int spawnAmount;
+    public float offsetRange;
     public override void PerformAttack(Transform bossTransform, Transform playerTransform)
     {
         base.PerformAttack(bossTransform, playerTransform);
 
-        // Instantiate the bounce obstacle prefab at the boss's position
-        Instantiate(switchPrefab, bossTransform.position, Quaternion.identity);
+        for (int index = 0; index < spawnAmount; index++)
+        {
+            Vector3 randomOffset = new Vector3(
+                   Random.Range(-offsetRange, offsetRange),
+                   Random.Range(-offsetRange, offsetRange),
+                   0f);
+
+            // Calculate spawn position with random offset
+            Vector3 spawnPosition = bossTransform.position + randomOffset;
+
+            // Instantiate the prefab at the calculated position
+            Instantiate(switchPrefab, spawnPosition, Quaternion.identity);
+        }
+      
 
         // Start the cooldown timer for this attack
         if (bossTransform.TryGetComponent(out MonoBehaviour monoBehaviour))

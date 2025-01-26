@@ -16,3 +16,4 @@ MonoBehaviour:
   icon: {fileID: 0}
   bounceObstaclePrefab: {fileID: 2777032390973947224, guid: 5cf3f29673aeb4d0d942d2b8adeb9899, type: 3}
   cooldown: 1
+  spawnAmount: 3

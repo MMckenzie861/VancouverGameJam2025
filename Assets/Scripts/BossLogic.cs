@@ -8,6 +8,7 @@ public class BossLogic : MonoBehaviour
 
     private bool isPerformingAttack = false;
 
+    private BossAttack lastAttack = null;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,10 +23,26 @@ public class BossLogic : MonoBehaviour
     {
         if (isPerformingAttack || attacks.Count == 0)
             return;
+        BossAttack selectedAttack = null;
+        if (attacks.Count == 1)
+        {
+            // If there's only one attack, just use it
+            selectedAttack = attacks[0];
+        }
+        else
+        {
+            // Select a random attack, excluding the last one
+            do
+            {
+                int randomIndex = Random.Range(0, attacks.Count);
+                selectedAttack = attacks[randomIndex];
+            }
+            while (selectedAttack == lastAttack); // Keep picking until it's not the last attack
+        }
 
-        // Select a random attack
-        int randomIndex = Random.Range(0, attacks.Count);
-        BossAttack selectedAttack = attacks[randomIndex];
+        // Store the current attack as the last attack
+        lastAttack = selectedAttack;
+
         // Execute the attack
         isPerformingAttack = true;
         Transform playerTransform = GameObject.FindGameObjectWithTag("Player").transform;

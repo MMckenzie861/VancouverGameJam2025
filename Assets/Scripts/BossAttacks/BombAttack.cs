@@ -1,20 +1,23 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
-[CreateAssetMenu(fileName = "BounceAttack", menuName = "Scriptable Objects/BounceAttack")]
-public class BounceAttack : BossAttack
+[CreateAssetMenu(fileName = "BombAttack", menuName = "Scriptable Objects/BombAttack")]
+public class BombAttack : BossAttack
 {
-    public GameObject bounceObstaclePrefab;
-    public float cooldown; // Individual cooldown for this attack
-    public int spawnAmount;
+    public GameObject bombPrefab;
+    public float cooldown;
+    public Vector2[] spawnAreas;
 
     public override void PerformAttack(Transform bossTransform, Transform playerTransform)
     {
         base.PerformAttack(bossTransform, playerTransform);
 
-        for (int index = 0; index < spawnAmount; index++)
+        foreach (Vector2 spawnArea in spawnAreas)
         {
-            // Instantiate the bounce obstacle prefab at the boss's position
-            Instantiate(bounceObstaclePrefab, bossTransform.position, Quaternion.identity);
+            Vector3 spawnPosition = new Vector3(spawnArea.x, spawnArea.y, 0f);
+            Instantiate(bombPrefab, spawnPosition, Quaternion.identity);
+
         }
 
         // Start the cooldown timer for this attack
