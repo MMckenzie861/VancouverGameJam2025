@@ -5,25 +5,42 @@ public class BossLogic : MonoBehaviour
 {
     [SerializeField]    
     public List<BossAttack> attacks;
+
+    private bool isPerformingAttack = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        PerformRandomAttack();
+        foreach (var attack in attacks)
+        {
+            attack.Initialize(this);
+        }
+        PerformNextAttack();
     }
 
-    // Update is called once per frame
-    void Update()
+    void PerformNextAttack()
     {
-        
-    }
+        if (isPerformingAttack || attacks.Count == 0)
+            return;
 
-    void PerformRandomAttack()
-    {
         // Select a random attack
         int randomIndex = Random.Range(0, attacks.Count);
         BossAttack selectedAttack = attacks[randomIndex];
-
         // Execute the attack
-        selectedAttack.PerformAttack(transform, GameObject.FindGameObjectWithTag("Player").transform);
+        isPerformingAttack = true;
+        Transform playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        if (playerTransform != null)
+        {
+            selectedAttack.PerformAttack(transform, playerTransform);
+        }
+    }
+
+    public void OnAttackComplete(BossAttack completedAttack)
+    {
+        Debug.Log($"{completedAttack.attackName} is complete. Selecting next attack.");
+        isPerformingAttack = false;
+
+        // Perform the next attack after the current one completes
+        PerformNextAttack();
     }
 }
