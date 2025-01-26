@@ -48,5 +48,6 @@ public class ShotgunAttack : MonoBehaviour
                 rb.linearVelocity = direction * attack.speed;
             }
         }
+
     }
 }
