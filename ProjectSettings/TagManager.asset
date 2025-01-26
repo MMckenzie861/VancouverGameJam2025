@@ -11,6 +11,7 @@ TagManager:
   - Three
   - Two
   - One
+  - BubbleSFX
   layers:
   - Default
   - TransparentFX
