@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 4051853540797402007}
   - component: {fileID: 3723302801983896241}
   - component: {fileID: 519686953884893189}
+  - component: {fileID: 6362910754636031513}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,7 +104,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attacks:
   - {fileID: 11400000, guid: f5dde7bb5163aec43a616eae9dd3c404, type: 2}
-  - {fileID: 11400000, guid: 4e97648417899fe42945c2e0b3115a72, type: 2}
   - {fileID: 11400000, guid: d8c9cfa0319a3ef4eaaa3aad23c809a9, type: 2}
   - {fileID: 11400000, guid: f2b5918b140c6e5408f73ef96df38f02, type: 2}
 --- !u!61 &519686953884893189
@@ -152,3 +152,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &6362910754636031513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6496469836042293849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58ca0ac9afaf9fc43bd01f11465bef68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  damage: 1
