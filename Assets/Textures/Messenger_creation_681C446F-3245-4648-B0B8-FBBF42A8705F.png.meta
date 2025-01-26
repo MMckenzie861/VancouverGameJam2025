@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4d2a0545fd97ad247a3d896a2e68930b
+guid: 81e5e1f94e6670e419458310f90fc77a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5712959122012955994
-    second: Bubble_0
+      213: -5095880701440870735
+    second: Messenger_creation_681C446F-3245-4648-B0B8-FBBF42A8705F_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bubble_0
+      name: Messenger_creation_681C446F-3245-4648-B0B8-FBBF42A8705F_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 58
-        width: 474
-        height: 454
+        x: 52
+        y: 195
+        width: 407
+        height: 195
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6aa171472fd77b0b0800000000000000
-      internalID: -5712959122012955994
+      spriteID: 1b639dc408bc749b0800000000000000
+      internalID: -5095880701440870735
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bubble_0: -5712959122012955994
+      Messenger_creation_681C446F-3245-4648-B0B8-FBBF42A8705F_0: -5095880701440870735
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
